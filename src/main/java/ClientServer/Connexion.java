@@ -15,6 +15,7 @@ public class Connexion implements Runnable{
     private User user;
     private JTextArea textArea;
     private JComboBox contact;
+    private String response;
     
     public Connexion(Socket connexion, User user, JTextArea textArea, JComboBox contact){
         this.connexion = connexion;
@@ -36,5 +37,9 @@ public class Connexion implements Runnable{
     @Override
     public void run() {
 
+    }
+
+    public String getResponse(){
+        return this.response;
     }
 }
