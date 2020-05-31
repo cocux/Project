@@ -244,10 +244,8 @@ public class ClientProcessor implements Runnable{
                     }} catch (IOException e) {
                     e.printStackTrace();
                 }
-
-                writer.flush();
                 writer.write(toSend);
-
+                writer.flush();
                 sock = socketClient;
             }catch(SocketException e){
                 System.err.println("Connexion Stopped");
