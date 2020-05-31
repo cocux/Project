@@ -1,0 +1,35 @@
+G-nie-Logiciel
+|--pom.xml
+`-- src
+    |-- main
+    |   `-- java
+    |       |
+    |		|--ClientServer
+    |		|
+    |		|--Data
+    |		|
+    |		|--Interface
+    `-- test
+        `-- java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
