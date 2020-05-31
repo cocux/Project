@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Built-By: mbp
-Class-Path: lib/gson-2.8.6.jar
-Build-Jdk: 1.8.0_191
-Created-By: Maven Integration for Eclipse
-Main-Class: Interface.InterfaceConnexion
-

@@ -9,7 +9,6 @@ import java.util.Hashtable;
 
 public class TimeServer {
 
-    //On initialise des valeurs par défaut
     private int port = 2345;
     private String host = "192.168.1.29";
     private ServerSocket server = null;
@@ -39,11 +38,7 @@ public class TimeServer {
         }
     }
 
-
-    //On lance notre serveur
     public void open() {
-
-        //Toujours dans un thread à part vu qu'il est dans une boucle infinie
         Thread t = new Thread(new Runnable() {
             public void run() {
                 while (isRunning == true) {
@@ -51,18 +46,13 @@ public class TimeServer {
                     try {
                         //On attend une connexion d'un client
                         Socket client = server.accept();
-
-                        //Une fois reçue, on la traite dans un thread séparé
                         System.out.println("Connexion cliente reçue.");
                         Thread t = new Thread(new ClientProcessor(client,dic));
                         t.start();
-
-
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
-
                 try {
                     server.close();
                 } catch (IOException e) {
@@ -71,10 +61,8 @@ public class TimeServer {
                 }
             }
         });
-
         t.start();
     }
-
     public void close() {
         isRunning = false;
     }
